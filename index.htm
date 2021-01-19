@@ -1,0 +1,701 @@
+﻿<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta http-equiv="Cache-Control" content="no-transform"/>
+		<meta http-equiv="Cache-Control" content="no-siteapp"/>
+		<meta http-equiv="Content-language" content="zh-CN"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="applicable-device" content="pc">
+		<title>
+			盛创房地产官网-用心打造让您放心的中介品牌！		</title>
+		<meta name="description" content="出租出售安全有保障，租房购房盛创来帮忙！"/>
+		<meta name="keywords" content=""/>
+		<link rel="shortcut icon" href="/Upload/Admin/Images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="common.css" tppabs="http://xjyz.xyzPublic/Home/css/common.css">
+		<link rel="stylesheet" type="text/css" href="main.css" tppabs="http://xjyz.xyzPublic/Home/css/main.css">
+		<link rel="stylesheet" type="text/css" href="kaidanim.css" tppabs="http://xjyz.xyzPublic/Home/css/kaidanim.css"/>
+		<link rel="stylesheet" type="text/css" href="index_s.css" tppabs="http://xjyz.xyzPublic/Home/css/index_s.css">
+		<style type="text/css">
+			a:link{
+				text-decoration:none;
+			}
+			a:visited {
+				text-decoration:none;
+			}
+			a:hover {
+				text-decoration:none;
+			}
+			a:active {
+				text-decoration:none;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			.tabClick{
+				background: #f3f3f3;
+				overflow: hidden;
+			}
+			.tabClick li{
+				height:40px;
+				line-height: 40px;
+				width: 10%;
+				float: left;
+				text-align: center;
+				overflow:auto;
+			}
+			.tabClick li.active{
+				color: #099;
+				transition: 0.1s;
+				font-weight: bold;
+			}
+			.tabCon{
+				overflow: hidden;
+				height:120px;
+			}
+			.tabBox{
+				position: relative;
+			}
+			.tabList{
+				word-break: break-all;
+				width:100%;
+				float:left;
+			}
+			.tabList li{
+				float:left;
+				padding:10px;
+				width:128px;
+			}
+			.tabList li a{
+				color:#707070;
+			}
+			.tabList ul:after{
+				clear: both;
+				visibility: hidden;
+				display: block;
+				content: "";
+			}
+			.tabList ul{
+				margin-left:20px;
+				height:118px;
+				overflow:auto;
+			}
+			.lineBorder{
+				height: 2px;
+				overflow: hidden;
+				border-bottom:1px solid #099;
+				background: #f3f3f3;
+			}
+			.lineDiv{
+				background: #099;
+				width: 10%;
+			}
+			.s4-tit{
+				text-align: center;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				color: #333;
+				font-size: 30px;
+			}
+			.s4-tit a{
+				color: #333;
+			}
+			html {
+				overflow-x:hidden;
+			}
+			.header .fr .nav ul>li{
+				z-index: 2;
+			}
+			.header .fl a{
+				position: relative;
+				z-index: 2;
+			}
+			.sel-city {
+				cursor: pointer;
+				float: left;
+				margin: 10px 112px 0 20px;
+				position: relative;
+				text-align: center;
+				width: 65px;
+				z-index: 5;
+			}
+			.sel-city span {
+				display: inline-block;
+				width: 65px;
+				height: 40px;
+				line-height: 40px;
+				color: #fff;
+				border-radius: 5px;
+				border-bottom-width: 0;
+				
+				background: rgba(0,0,0,.4);
+				font-size: 14px;
+			}
+			.sel-city dl {
+				width: 100%;
+				position: absolute;
+				top: 41px;
+				display: none;
+				left: 0;
+				float: left;
+				z-index: 1;
+				background: rgba(0,0,0,.4);
+				border-top: none;
+			}
+			.sel-city dl dd:last-child {
+				border: none;
+			}
+			.sel-city dl dd a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: #ccc;
+				font-size: 14px;
+				text-align: center;
+			}
+			.header .nav ul li:hover a{
+				color: #009b78;
+			}
+			.sel-city dl dd {
+				line-height: 40px;
+				height: 40px;
+				text-align: center;
+			}
+			.sel-city:hover span {
+				border-bottom-width: 0;
+				
+			}
+			.sel-city dl dd a:hover {
+				color: #fff;
+			}
+			.sel-city:hover dl {
+				display: block;
+			}
+			#banner{
+			}
+			.banner-div{
+				z-index: 11;
+				width: 700px;
+				position: absolute;
+				left: 50%;
+				bottom: 127px;
+				margin-left: -350px;
+				border-radius: 2px;
+				background: rgba(255,255,255,.8);
+			}
+			.banner-div .autocompleter {
+				width: 505px;
+				left: 0;
+				background: #EDEDED;
+				top: 50px;
+				border-radius: 5px;
+				z-index: 3;
+			}
+			.banner-div .autocompleter .autocompleter-list {
+				margin: 3px 0 3px 0;
+				max-height: 200px;
+				overflow: auto;
+			}
+			.banner-div .autocompleter .autocompleter-list li{
+				float: none;
+			}
+			.banner-div .autocompleter .autocompleter-list .autocompleter-item a {
+				display: block;
+				padding: 0 10px;
+				overflow: hidden;
+				color: #333;
+			}
+			.banner-div .autocompleter .autocompleter-list .autocompleter-item a i {
+				font-style: normal;
+				float: left;
+				width: 50%;
+				overflow: hidden;
+				word-break: break-all;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-align: left;
+			}
+			.banner-div .autocompleter .autocompleter-list .autocompleter-item a em {
+				color: #ccc;
+				float: right;
+				width: 50%;
+				font-size: 14px;
+				overflow: hidden;
+				word-break: break-all;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-align: left;
+			}
+			.banner-div .ul-tab{
+				position: absolute;
+				height: 41px;
+				top:-41px;
+			}
+			.banner-div .ul-tab li{
+				width: 80px;
+				height: 41px;
+				float: left;
+				display: inline-block;
+				margin-left: 5px;
+				background: rgba(0,0,0,.4);
+				text-align: center;
+				line-height: 41px;
+				border-radius: 2px 2px 0 0;
+				cursor: pointer;
+				font-size: 16px;
+				color: #fff;
+			}
+			.banner-div .ul-tab li.active{
+				color: #000;
+				background-color: rgba(255,255,255,.8);
+			}
+			.banner-div .ul-tab li.active a{
+				color: #000;
+			}
+			.banner-div .input{
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+			.banner-div .input:after {
+				clear: both;
+			}
+			.banner-div .input:after, .banner-div .input:before {
+				display: table;
+				content: "";
+			}
+			.banner-div .input a{
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 50px;
+				transition: color .5s,background-color .5s;
+			}
+			.banner-div .input .s-btn{
+				text-align: center;
+				width: 150px;
+				color: #fff;
+				float: left;
+				background: #009b78;
+				border-radius: 0 2px 2px 0;
+				cursor: pointer;
+				display: block;
+				height: 50px;
+			}
+			.banner-div .input input{
+				text-indent: 2.2em;
+				float: left;
+				width: 485px;
+				height: 50px;
+				padding: 0 10px;
+				color: #000;
+				font-size: 16px;
+				border: none;
+				border-radius: 2px 0 0 2px;
+				background: #fff;
+				outline: 0;
+			}
+			.banner-div .ul-tab li a{
+				color: #fff;
+				display: block;
+				width: 100%;
+				height: 100%;
+				font-size: 100%;
+			}
+			.banner-div .box{
+				position: relative;
+				display: none;
+			}
+			.banner-div .box.active{
+				display: block;
+			}
+			.banner-div div .t_quick{
+				margin-top: 32px;
+				margin-left: 21px;
+			}
+			.banner-div div .t_quick a{
+				color: #666;
+				font-size: 15px;
+				display: inline-block;
+				margin-right: 20px;
+			}
+			.ershoufang li .bottom p.p01{
+				padding-bottom: 0px;
+				height: 25px;
+				font-weight:bold;
+				padding-top: 10px;
+			}
+			.ershoufang li .tips{
+				line-height: 20px;
+				margin-left: 18px;
+			}
+			.ershoufang li .tips .price1{
+					line-height: 30px;
+				font-size: 18px;
+				color: #f16e7e;
+			}
+			.ershoufang li .tips .price1 span{
+				font-size: 22px;
+				font-weight: 600;
+			}
+			.ershoufang li{
+				background: #fff;
+				padding: 10px;
+				background: #fff;
+				width: 280px;
+			}
+			.ershoufang li img {
+				width: 280px;
+				height: 220px;
+			}
+			.hed{
+				width: 100%;
+				height: 100px;
+			}
+			.hed h2.title{
+				margin: 30px auto 25px;
+				text-align: center;
+				color: #394043;
+				font-weight: 700;
+				font-size: 34px;
+				width: 600px;
+			}
+			.hed .title span {
+				color: #009b78;
+				font-weight: 700;
+			}
+			.ershoufang ul{
+				margin-top: 0px;
+			}
+			.hed .moreBox {
+				width: 300px;
+				font-size: 18px;
+				position: relative;
+				left: 70%;
+				top: -41px;
+				margin-left: 70px;
+				font-weight: 400;
+			}
+			.hed .moreBox .num {
+				color: #009b78;
+			}
+			.hed .moreBox .text {
+				color: #999;
+				margin-right: 18px;
+			}
+			.hed .moreBox .more {
+				font-size: 14px;
+				color: #009b78;
+				line-height: 18px;
+				margin-right: 10px;
+			}
+			.banner-div .input img {
+				position: absolute;
+				left: 13px;
+				top: 13px;
+			}
+			.t_quick:after {
+				content: "\0020";
+				display: block;
+				height: 0;
+				clear: both;
+			}
+		</style>
+		<script src="jquery-1.7.2.min.js" tppabs="http://xjyz.xyzPublic/Home/js/jquery-1.7.2.min.js"></script>
+		<script src="layer.js" tppabs="http://xjyz.xyzPublic/admin/lib/layer/2.4/layer.js" type="text/javascript"></script>
+		<script src="open_tab.js" tppabs="http://xjyz.xyz/admin/js/open_tab.js"></script>
+		<link type="text/css" href="jquery.autocompleter.css-1.css" tppabs="http://xjyz.xyz/Home/css/jquery.autocompleter.css?1" rel="stylesheet" />
+		<script src="jquery.autocompleter.js" tppabs="http://xjyz.xyz/Home/js/jquery.autocompleter.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$( ".xiaoqu_search" ).autocompleter({
+					source: "ajax_xiaoqu.html"/*tpa=http://xjyz.xyzHome/Common/ajax_xiaoqu.html*/,
+					minLength: 1,
+					template: '<a title="{{ label }}"><i>{{ label }}</i> <em>{{ label }}</em> </a>',
+					select: function( event, ui ) {
+					log( ui.item ?
+						"Selected: " + ui.item.label :
+						"Nothing selected, input was " + this.value);
+					},
+					open: function() {},
+					close: function() {}
+				});
+				$('.banner-div ul li a').click(function(){
+					var id = $(this).data('id');
+					$('.banner-div ul li').removeClass('active');
+					$('http://xjyz.xyz.banner-div .box').removeClass('active');
+					$(this).parents('li').addClass('active');
+					$(id).addClass('active');
+				});
+			});
+		</script>
+		<base target="_blank">
+	<meta name="__hash__" content="6666cd76f96956469e7be39d750cc7d9_53fb915f64da5ec5d5b22494e7d3548a" /></head>
+	<body>
+		<div class="header" data-stellar-background-ratio="0.07">
+			<div class="wrapper">
+				<div class="fl" style="text-shadow:red 0 1px 0">
+					<a href="" title="房地产" class="logo" target="_self"></a>
+				</div>
+				<div class="fr">
+					<div class="nav typeUserInfo">
+						<div class="ti-hover">
+							<div class="typeShowUser"></div>
+						</div>
+						<ul>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz/index.html" title="售房">
+									售房
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyzg/jingpin.html" title="精品房">
+									精品房
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz/index.html" title="租房">
+									租房
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz/index.html" title="新房">
+									新房
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz/index.html" title="小区">
+									小区
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz/index.html" title="招聘">
+									招聘
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz/shangye.html" title="计算器">
+									计算器
+								</a>
+							</li>
+							<li>
+								<a class="" href="" tppabs="http://xjyz.xyz" title="地图找房">
+									地图找房
+								</a>
+							</li>
+														
+					</div>
+				</div>
+				<div class="header-wrap">
+					<div id="banner">
+						<div class="banner-div">
+							<ul class="ul-tab">
+								<li class="active"><a data-id="#ershoufang">售房</a></li>
+								<li><a data-id="#ysfang">新房</a></li>
+								<li><a data-id="#zufang">租房</a></li>
+								<li><a data-id="#xiaoqu">小区</a></li>
+							</ul>
+							<div class="box active" id="ershoufang">
+								<div class="input">
+									
+									<input type="text" name="" class="xiaoqu_search">
+									<a class="s-btn" onclick="location.href='http://xjyz.xyzershoufang/index.html?keyword='+$('#ershoufang input').val()">开始找房</a>
+								</div>
+								<div class="t_quick">
+																		<a href="16.html" tppabs="http://xjyz.xyzershoufang/index/qy/16.html" class="xiaoer" target="_blank">在水一方</a><a href="19.html" tppabs="http://xjyz.xyzershoufang/index/qy/19.html" class="xiaoer" target="_blank">河畔新城</a><a href="20.html" tppabs="http://xjyz.xyzershoufang/index/qy/20.html" class="xiaoer" target="_blank">河畔家园</a><a href="21.html" tppabs="http://xjyz.xyzershoufang/index/qy/21.html" class="xiaoer" target="_blank">丽都水岸</a>								</div>
+								<div style="line-height: 10px;">&nbsp;</div>
+							</div>
+							<div class="box" id="ysfang">
+								<div class="input">
+									<img src="search.png" tppabs="http://xjyz.xyzPublic/Home/img/search.png"/>
+									<input type="text" name="" class="xiaoqu_search">
+									<a class="s-btn" onclick="location.href='http://xjyz.xyzysfang/index.html?keyword='+$('#ysfang input').val()">查找新房</a>
+								</div>
+								<div class="t_quick">
+																</div>
+								<div style="line-height: 10px;">&nbsp;</div>
+							</div>
+							<div class="box" id="zufang">
+								<div class="input">
+									<img src="search.png" tppabs="http://xjyz.xyzPublic/Home/img/search.png"/>
+									<input type="text" name="" class="xiaoqu_search">
+									<a class="s-btn" onclick="location.href='http://xjyz.xyzzufang/index.html?keyword='+$('#zufang input').val()">开始找房</a>
+								</div>
+								<div class="t_quick">
+									<a href="16-2.html" tppabs="http://xjyz.xyzzufang/index/qy/16.html" class="xiaoer" target="_blank">在水一方</a><a href="19-2.html" tppabs="http://xjyz.xyzzufang/index/qy/19.html" class="xiaoer" target="_blank">河畔新城</a><a href="20-2.html" tppabs="http://xjyz.xyzzufang/index/qy/20.html" class="xiaoer" target="_blank">河畔家园</a><a href="21-2.html" tppabs="http://xjyz.xyzzufang/index/qy/21.html" class="xiaoer" target="_blank">丽都水岸</a>								</div>
+								<div style="line-height: 10px;">&nbsp;</div>
+							</div>
+							<div class="box" id="xiaoqu">
+								<div class="input">
+									<img src="search.png" tppabs="http://xjyz.xyzPublic/Home/img/search.png"/>
+									<input type="text" name="" class="xiaoqu_search">
+									<a class="s-btn" onclick="location.href='http://xjyz.xyzxiaoqu/index.html?keyword='+$('#xiaoqu input').val()">查找小区</a>
+								</div>
+								<div class="t_quick">
+									<a href="16-3.html" tppabs="http://xjyz.xyzxiaoqu/index/qy/16.html" class="xiaoer" target="_blank">在水一方</a><a href="19-3.html" tppabs="http://xjyz.xyzxiaoqu/index/qy/19.html" class="xiaoer" target="_blank">河畔新城</a><a href="20-3.html" tppabs="http://xjyz.xyzxiaoqu/index/qy/20.html" class="xiaoer" target="_blank">河畔家园</a><a href="21-3.html" tppabs="http://xjyz.xyzxiaoqu/index/qy/21.html" class="xiaoer" target="_blank">丽都水岸</a>								</div>
+								<div style="line-height: 10px;">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="home-nav">
+			<ul class="count-4" style="margin-left: 0px;">
+				<li class="hvr-bob">
+					<a href="index.html" tppabs="http://xjyz.xyz/index.html" title="售房">
+						<img src="esf.png" tppabs="http://xjyz.xyz/Home/img/home_nav/esf.png">
+						<b>
+							找售房
+						</b>
+						<p>
+							真实在售房源，房地产承诺真实售房所见即真
+						</p>
+					</a>
+				</li>
+				<li class="hvr-bob">
+					<a href="index_bat.html" tppabs="http://xjyz.xyz/index_bat.html" title="地图找房">
+						<img src="dtzf.png" tppabs="http://xjyz.xyz/Home/img/home_nav/dtzf.png">
+						<b>
+							地图找房
+						</b>
+						<p>
+							真实精品房源，温馨房地产承诺真实售房所见即真
+						</p>
+					</a>
+				</li>
+				<li class="hvr-bob">
+					<a href="index-1.html" tppabs="http://xjyz.xyz/index.html" title="租房">
+						<img src="zf.png" tppabs="http://xjyz.xyz/Home/img/home_nav/zf.png">
+						<b>
+							找租房
+						</b>
+						<p>
+							真实出租房源，房地产承诺真实租房所见即真
+						</p>
+					</a>
+				</li>
+				<li class="hvr-bob">
+					<a href="index-3.html" tppabs="http://xjyz.xyz/index.html" title="小区">
+						<img src="xq.png" tppabs="http://xjyz.xyz/Home/img/home_nav/xq.png">
+						<b>
+							找小区
+						</b>
+						<p>
+							真实小区，房地产承诺真实小区所见即真
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- <div class="hand-kaidan"></div> -->
+		<div class="ershoufang" style="display:block;">
+			<div class="wrapper">
+				<div class="fl hed">
+					<h2 class="title"><span>推荐</span>售房</h2>
+					<div class="moreBox">
+						<a class="num">100%</a>
+						<a class="text">真实优质房源为你而选</a>
+						<a href="index.html" tppabs="http://xjyz.xyz/index.html" target="_blank" class="more">更多</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+				</div>
+		</div>
+		<div class="ershoufang" style="display:block;">
+			<div class="wrapper">
+				<div class="fl hed">
+					<h2 class="title"><span>推荐</span>新房</h2>
+					<div class="moreBox">
+						<a class="num">100%</a>
+						<a class="text">真实新房为你而选</a>
+						<a href="javascript:if(confirm('http://xjyz.xyzysfang/index.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://xjyz.xyzysfang/index.html'" tppabs="http://xjyz.xyz/index.html" target="_blank" class="more">更多</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<ul>
+										<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+		<div class="overlayBg"></div>
+		<div class="savelist"></div>
+		<div class="footer" style="margin-top: 20px;height: 210px;">
+			<div class="wrapper">
+				<div class="kaidan-link-box">
+					<div class="fl">
+						<div class="tab"  style="margin-top:20px">
+							<a href="" target="_parent" title="首页">
+								<span>
+									首页
+								</span>
+							</a>
+							<a href="index.html" tppabs="http://xjyz.xyz/index.html" title="售房">
+								<span>
+									售房
+								</span>
+							</a>
+							<a href="" tppabs="http://xjyz.xyzershoufang/" title="精品房">
+								<span>
+									精品房
+								</span>
+							</a>
+							<a href="" tppabs="http://xjyz.xyz/index.html" title="租房">
+								<span>
+									租房
+								</span>
+							</a>
+							<a href="" tppabs="http://xjyz.xyzy/index.html" title="新房">
+								<span>
+									新房
+								</span>
+							</a>
+							<a href="" tppabs="http://xjyz.xyz/index.html" title="小区">
+								<span>
+									小区
+								</span>
+							</a>
+							<a href="" tppabs="http://xjyz.xyz/index.html" title="招聘">
+								<span>
+									招聘
+								</span>
+							</a>
+							<a href="" tppabs="http://xjyz.xyz/shangye.html" title="计算器">
+								<span>
+									计算器
+								</span>
+							</a>
+							<a href="" tppabs="lianxi/index.html" title="联系我们">
+								<span>
+									联系我们
+								</span>
+							</a>
+							
+							
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="bottom" style="text-align:center">
+					<div class="copyright f2">
+						© 2021 盛创房屋中介有限 shengchuang &nbsp;&nbsp;座机/传真：0421-409999999					</div>
+					<div class="copyright f3">
+						公司地址:喀左县，大城子镇博望A区西门、南走100米&nbsp;&nbsp;联系电话：17xxxxxxx18				</div>
+					<div class="copyright f4">
+						版权所有：星际网络设计，家里蹲大学517男舍  
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="only" data-city="qd" data-page="site_index"></div>
+	</body>
+</html>
